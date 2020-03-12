@@ -83,19 +83,19 @@ namespace MusicOrganizer.Tests
     }
     
     [TestMethod]
-    public void GetId_RecordsInstantiateWithAnId_Int()
+    public void Find_ReturnsCorrectRecord_Record()
     {
       //Arrange
       string title = "Don't Push to Master";
       string artist = "Brooke Travis";
-      Record newRecord = new Record(title, artist);
+      Record newRecord1 = new Record(title, artist);
+      Record newRecord2 = new Record("Push to Branch", "Travis Brooke");
 
       //Act
-      int result = newRecord.Id;
+      Record result = Record.Find(2);
 
       //Assert
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(newRecord2, result);
     }
-
   }
 }
