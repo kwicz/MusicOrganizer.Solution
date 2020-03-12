@@ -64,6 +64,23 @@ namespace MusicOrganizer.Tests
       //Assert
       Assert.AreEqual(updatedTitle, newRecord.Title);
     }
+    
+    [TestMethod]
+    public void GetAll_ReturnsRecords_RecordList()
+    {
+      //Arrange
+      string title = "Don't Push to Master";
+      string artist = "Brooke Travis";
+      Record newRecord1 = new Record(title, artist);
+      Record newRecord2 = new Record(title, artist);
+      List<Record> newList = new List<Record> { newRecord1, newRecord2 };
+
+      //Act
+      List<Record> result = Record.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(newList, result);
+    }
 
   }
 }
