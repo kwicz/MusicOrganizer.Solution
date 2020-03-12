@@ -9,9 +9,9 @@
 
 @foreach (Record record in Model)
 {
-  <h3><a href="/records/@record.Id">@record.Title</a></h3>
+  <h3><a href='/records/@record.Id'>Title of record: @record.Title</a></h3>
 }
 
 <a href="/records/search"><button type=submit>Search for Records</button></a>
 <a href="/records/new"><button type=submit>Add a Record</button></a>
-<a href="/records/delete"><button type=submit>Remove a Record</button></a>
+<a href="/records/delete"><button type=submit>Remove all Records</button></a>

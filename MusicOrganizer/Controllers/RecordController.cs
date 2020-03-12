@@ -6,7 +6,6 @@ namespace MusicOrganizer.Controllers
 {
   public class RecordController : Controller
   {
-
     [HttpGet("/records")]
     public ActionResult Index()
     {
