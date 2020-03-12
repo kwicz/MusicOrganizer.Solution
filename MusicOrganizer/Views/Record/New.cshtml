@@ -1,0 +1,15 @@
+@using MusicOrganizer.Models;
+
+<h1>Add a new record:</h1>
+
+<form action="/records" method="post">
+  <label for="recordTitle">Record Title</label>
+  <input id="recordTitle" name="recordTitle" type="text">
+  <label for="recordArtist">Record Artist</label>
+  <input id="recordArtist" name="recordArtist" type="text">
+  <button type="submit">Add Record</button>
+</form>
+
+<a href="/records"><button type=submit>See all Records</button></a>
+<a href="/records/search"><button type=submit>Search for Records</button></a>
+<a href="/records/delete"><button type=submit>Remove a Record</button></a>
