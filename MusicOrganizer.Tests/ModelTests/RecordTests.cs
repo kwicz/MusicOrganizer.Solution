@@ -12,5 +12,12 @@ namespace MusicOrganizer.Tests
     {
       Record.ClearAll();
     }
+
+    [TestMethod]
+    public void RecordConstructor_CreatesInstanceOfRecord_Record()
+    {
+      Record newRecord = new Record("Don't Push to Master", "Brooke Travis");
+      Assert.AreEqual(typeof(Record), newRecord.GetType());
+    }
   }
 }
