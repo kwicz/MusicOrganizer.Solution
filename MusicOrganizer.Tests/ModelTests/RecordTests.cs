@@ -81,6 +81,21 @@ namespace MusicOrganizer.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+    
+    [TestMethod]
+    public void GetId_RecordsInstantiateWithAnId_Int()
+    {
+      //Arrange
+      string title = "Don't Push to Master";
+      string artist = "Brooke Travis";
+      Record newRecord = new Record(title, artist);
+
+      //Act
+      int result = newRecord.Id;
+
+      //Assert
+      Assert.AreEqual(1, result);
+    }
 
   }
 }
