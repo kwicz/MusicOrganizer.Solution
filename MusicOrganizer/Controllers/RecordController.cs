@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using MusicOrganizer.Models;
+using System.Collections.Generic;
 
 namespace MusicOrganizer.Controllers
 {
@@ -31,6 +32,13 @@ namespace MusicOrganizer.Controllers
     {
       Record selectedRecord = Record.Find(id);
       return View(selectedRecord);
+    }
+
+    [HttpPost("/records/delete")]
+    public ActionResult DeleteAll()
+    {
+      Record.ClearAll();
+      return View();
     }
   }
 }
